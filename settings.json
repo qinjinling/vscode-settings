@@ -40,7 +40,7 @@
         { "before": ["j", "j"], "after": ["<esc>"] }
     ],
     "vim.normalModeKeyBindings": [
-        // 跳转到上一位置
+        // leader related
         { "before": ["leader", "j"], "commands": ["extension.vim_ctrl+o"] },
         { "before": ["leader", "k"], "commands": ["extension.vim_ctrl+i"] },
         { "before": ["leader", "h"], "commands": [":tabp"] },
