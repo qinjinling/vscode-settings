@@ -1,0 +1,86 @@
+{
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "extensions.ignoreRecommendations": false,
+    "workbench.tree.indent": 16,
+    "go.useLanguageServer": true,
+    "editor.wordWrap": "on",
+    "remote.SSH.showLoginTerminal": true,
+    "files.trimTrailingWhitespace": true,
+    "go.toolsManagement.autoUpdate": true,
+    "tailwindCSS.colorDecorators": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.fontFamily": "Consolas, 'FiraCode NFM', monospace",
+    "editor.fontSize": 12.96,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "terminal.integrated.fontFamily": "FiraCode NFM",
+    "editor.linkedEditing": true,
+    "editor.accessibilitySupport": "off",
+    "window.newWindowDimensions": "inherit",
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 4,
+    "[hmtl][javascript][typescript][json][css][scss][vue]": {
+        "editor.tabSize": 2
+    },
+    "update.mode": "none",
+    "workbench.colorTheme": "Solarized Light",
+    "editor.lineNumbers": "relative",
+    "workbench.activityBar.visible": false,
+    // vim 配置
+    "vim.leader": "<space>",
+    "vim.cursorStylePerMode.normal": "underline",
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        { "before": ["j", "j"], "after": ["<esc>"] }
+    ],
+    "vim.normalModeKeyBindings": [
+        // 跳转到上一位置
+        { "before": ["leader", "j"], "commands": ["extension.vim_ctrl+o"] },
+        { "before": ["leader", "k"], "commands": ["extension.vim_ctrl+i"] },
+        { "before": ["leader", "h"], "commands": [":tabp"] },
+        { "before": ["leader", "l"], "commands": [":tabn"] },
+        { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
+        { "before": ["leader", "e"], "commands": ["workbench.action.toggleSidebarVisibility"] },
+        { "before": ["leader", "a"], "commands": ["workbench.action.toggleActivityBarVisibility"] },
+        { "before": ["leader", "f"], "commands": ["revealInExplorer"] },
+        { "before": ["leader", "g"], "commands": ["workbench.action.quickOpen"] },
+        // gj 快速下移
+        { "before": ["g", "j"], "commands": ["extension.vim_ctrl+d"] },
+        // gk 快速上移
+        { "before": ["g", "k"], "commands": ["extension.vim_ctrl+u"] },
+        // 使用内置撤销和重做
+        { "before": ["u"], "commands": ["undo"] },
+        { "before": ["U"], "commands": ["redo"] },
+        // 跳转到符号
+        { "before": ["g", "s"], "commands": ["workbench.action.gotoSymbol"] },
+        // 行内移动
+        { "before": ["H"], "after": ["^"] },
+        { "before": ["L"], "after": ["$"] },
+        // 折叠
+        { "before": ["z", "z"], "commands": ["editor.toggleFold"] },
+        { "before": ["K"], "commands": ["lineBreakInsert"], "slient": true },
+        // 跳转 marker 也就是出问题的行
+        { "before": ["g", "["], "commands": ["editor.action.marker.prevInFiles"] },
+        { "before": ["g", "]"], "commands": ["editor.action.marker.nextInFiles"] },
+    ],
+    "vim.operatorPendingModeKeyBindings": [
+        { "before": ["L"], "after": ["$"] },
+        { "before": ["H"], "after": ["^"] }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [],
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [
+        { "before": ["("], "after": ["i("] }
+    ],
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-e>": false,
+        "<C-b>": false,
+        "<C-j>": false
+    }
+}
