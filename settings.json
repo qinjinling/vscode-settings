@@ -37,50 +37,46 @@
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
-        { "before": ["j", "j"], "after": ["<esc>"] }
+        { "before": ["j", "k"], "after": ["<esc>"] }
     ],
     "vim.normalModeKeyBindings": [
         // leader related
-        { "before": ["leader", "j"], "commands": ["extension.vim_ctrl+o"] },
-        { "before": ["leader", "k"], "commands": ["extension.vim_ctrl+i"] },
-        { "before": ["leader", "h"], "commands": [":tabp"] },
-        { "before": ["leader", "l"], "commands": [":tabn"] },
-        { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
-        { "before": ["leader", "e"], "commands": ["workbench.action.toggleSidebarVisibility"] },
-        { "before": ["leader", "a"], "commands": ["workbench.action.toggleActivityBarVisibility"] },
-        { "before": ["leader", "f"], "commands": ["revealInExplorer"] },
-        { "before": ["leader", "g"], "commands": ["workbench.action.quickOpen"] },
-        // gj 快速下移
-        { "before": ["g", "j"], "commands": ["extension.vim_ctrl+d"] },
-        // gk 快速上移
-        { "before": ["g", "k"], "commands": ["extension.vim_ctrl+u"] },
-        // 使用内置撤销和重做
-        { "before": ["u"], "commands": ["undo"] },
-        { "before": ["U"], "commands": ["redo"] },
-        // 跳转到符号
-        { "before": ["g", "s"], "commands": ["workbench.action.gotoSymbol"] },
+        { "before": ["leader", "j"], "commands": ["extension.vim_ctrl+o"], "comment": "光标往后跳转" },
+        { "before": ["leader", "k"], "commands": ["extension.vim_ctrl+i"], "comment": "光标往前跳转" },
+        { "before": ["leader", "h"], "commands": [":tabp"], "comment": "前一个标签页" },
+        { "before": ["leader", "l"], "commands": [":tabn"], "comment": "后一个标签页" },
+        { "before": ["leader", "w"], "commands": ["workbench.action.files.save"], "comment": "调用内置文件保存" },
+        { "before": ["leader", "e"], "commands": ["workbench.action.toggleSidebarVisibility"], "comment": "Sidebar显示和隐藏" },
+        { "before": ["leader", "a"], "commands": ["workbench.action.toggleActivityBarVisibility"], "comment": "左侧工具栏显示和隐藏" },
+        { "before": ["leader", "f"], "commands": ["revealInExplorer"], "comment": "显示文件管理器并选中该文件" },
+        { "before": ["leader", "g"], "commands": ["workbench.action.quickOpen"], "comment": "显示文件快速选择工具栏" },
+        //  g for Go
+        { "before": ["g", "j"], "commands": ["extension.vim_ctrl+d"], "comment": "gj 快速下移" },
+        { "before": ["g", "k"], "commands": ["extension.vim_ctrl+u"], "comment": "gk 快速上移" },
+        { "before": ["g", "s"], "commands": ["workbench.action.gotoSymbol"], "comment": "gs 快速跳转到符号" },
+        { "before": ["g", "["], "commands": ["editor.action.marker.prevInFiles"], "comment": "跳转到下一个标红出问题的地方" },
+        { "before": ["g", "]"], "commands": ["editor.action.marker.nextInFiles"], "comment": "跳转到上一个标红出问题的地方" },
         // 行内移动
         { "before": ["H"], "after": ["^"] },
         { "before": ["L"], "after": ["$"] },
+        // 折行
+        { "before": ["K"], "commands": ["lineBreakInsert"], "slient": true },
+        // 使用内置撤销和重做
+        { "before": ["u"], "commands": ["undo"] },
+        { "before": ["U"], "commands": ["redo"] },
         // 折叠
         { "before": ["z", "z"], "commands": ["editor.toggleFold"] },
-        { "before": ["K"], "commands": ["lineBreakInsert"], "slient": true },
-        // 跳转 marker 也就是出问题的行
-        { "before": ["g", "["], "commands": ["editor.action.marker.prevInFiles"] },
-        { "before": ["g", "]"], "commands": ["editor.action.marker.nextInFiles"] },
     ],
-    "vim.operatorPendingModeKeyBindings": [
-        { "before": ["L"], "after": ["$"] },
-        { "before": ["H"], "after": ["^"] }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [],
     "vim.operatorPendingModeKeyBindingsNonRecursive": [
-        { "before": ["("], "after": ["i("] }
+        { "before": ["H"], "after": ["^"] },
+        { "before": ["L"], "after": ["$"] },
+        { "before": ["("], "after": ["i", "("] },
+        { "before": ["'"], "after": ["i", "'"] },
+        { "before": ["["], "after": ["i", "["] },
+        { "before": ["{"], "after": ["i", "{"] }
     ],
     "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-e>": false,
-        "<C-b>": false,
-        "<C-j>": false
+        "<C-a>": false, // 全选
+        "<C-j>": false, // Terminal 显示和隐藏
     }
 }
