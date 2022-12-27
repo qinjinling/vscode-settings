@@ -70,7 +70,7 @@
         "command": "-workbench.action.navigateForward",
         "when": "canNavigateForward"
     },
-    // 在代码自动提示框中上下移动
+    // 在智能提示中上下移动
     {
         "key": "ctrl+j",
         "command": "selectNextSuggestion",
@@ -92,7 +92,7 @@
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "vim.active && inQuickOpen"
     },
-    // 在终端窗口中切换
+    // 在多个终端窗口之间切换
     {
         "key": "ctrl+shift+j",
         "command": "workbench.action.terminal.focusNext",

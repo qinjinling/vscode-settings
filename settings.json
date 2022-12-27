@@ -48,7 +48,7 @@
         { "before": ["leader", "w"], "commands": ["workbench.action.files.save"], "comment": "调用内置文件保存" },
         { "before": ["leader", "e"], "commands": ["workbench.action.toggleSidebarVisibility"], "comment": "Sidebar显示和隐藏" },
         { "before": ["leader", "a"], "commands": ["workbench.action.toggleActivityBarVisibility"], "comment": "左侧工具栏显示和隐藏" },
-        { "before": ["leader", "f"], "commands": ["revealInExplorer"], "comment": "显示文件管理器并选中该文件" },
+        { "before": ["leader", "f"], "commands": ["revealInExplorer"], "comment": "显示左侧资源管理器并选中该文件" },
         { "before": ["leader", "g"], "commands": ["workbench.action.quickOpen"], "comment": "显示文件快速选择工具栏" },
         //  g for Go
         { "before": ["g", "j"], "commands": ["extension.vim_ctrl+d"], "comment": "gj 快速下移" },
@@ -65,7 +65,7 @@
         { "before": ["u"], "commands": ["undo"] },
         { "before": ["U"], "commands": ["redo"] },
         // 折叠
-        { "before": ["z", "z"], "commands": ["editor.toggleFold"] },
+        { "before": ["z", "z"], "commands": ["editor.toggleFold"] }
     ],
     "vim.operatorPendingModeKeyBindingsNonRecursive": [
         { "before": ["H"], "after": ["^"] },
@@ -77,6 +77,6 @@
     ],
     "vim.handleKeys": {
         "<C-a>": false, // 全选
-        "<C-j>": false, // Terminal 显示和隐藏
+        "<C-j>": false // Terminal 显示和隐藏
     }
 }
