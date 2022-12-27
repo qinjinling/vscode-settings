@@ -67,6 +67,10 @@
         // 折叠
         { "before": ["z", "z"], "commands": ["editor.toggleFold"] }
     ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        { "before": ["<C-h>"], "after": ["<left>"] },
+        { "before": ["<C-l>"], "after": ["<right>"] }
+    ],
     "vim.operatorPendingModeKeyBindingsNonRecursive": [
         { "before": ["H"], "after": ["^"] },
         { "before": ["L"], "after": ["$"] },
