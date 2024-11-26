@@ -1,4 +1,4 @@
-# My VS Code settings
+# My VSCode settings
 
 ## Vim 基本操作
 
