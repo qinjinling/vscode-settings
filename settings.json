@@ -34,9 +34,7 @@
         { "before": ["K"], "commands": ["lineBreakInsert"], "slient": true },
         // 使用内置撤销和重做
         { "before": ["u"], "commands": ["undo"] },
-        { "before": ["U"], "commands": ["redo"] },
-        // 折叠
-        { "before": ["z", "z"], "commands": ["editor.toggleFold"] }
+        { "before": ["U"], "commands": ["redo"] }
     ],
     "vim.insertModeKeyBindingsNonRecursive": [
         { "before": ["<C-h>"], "after": ["<left>"] },
@@ -51,6 +49,7 @@
         { "before": ["{"], "after": ["i", "{"] }
     ],
     "vim.handleKeys": {
+        "<C-k>": false, // 组合键前缀
         "<C-a>": false, // 全选
         "<C-j>": false // Terminal 显示和隐藏
     }
