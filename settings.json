@@ -19,10 +19,10 @@
         { "before": ["leader", "e"], "commands": ["workbench.action.toggleSidebarVisibility"], "comment": "Sidebar 显示和隐藏" },
         { "before": ["leader", "a"], "commands": ["workbench.action.toggleActivityBarVisibility"], "comment": "左侧工具栏显示和隐藏" },
         { "before": ["leader", "f"], "commands": ["revealInExplorer"], "comment": "显示左侧资源管理器并选中该文件" },
-        { "before": ["leader", "g"], "commands": ["workbench.action.quickOpen"], "comment": "显示文件快速选择工具栏" },
         //  g for Go
         { "before": ["g", "j"], "commands": ["extension.vim_ctrl+d"], "comment": "gj 快速下移" },
         { "before": ["g", "k"], "commands": ["extension.vim_ctrl+u"], "comment": "gk 快速上移" },
+        { "before": ["g", "q"], "commands": ["workbench.action.quickOpen"], "comment": "gq 显示文件快速选择工具栏" },
         { "before": ["g", "s"], "commands": ["workbench.action.gotoSymbol"], "comment": "gs 快速跳转到符号" },
         { "before": ["g", "["], "commands": ["editor.action.marker.prevInFiles"], "comment": "跳转到下一个标红出问题的地方" },
         { "before": ["g", "]"], "commands": ["editor.action.marker.nextInFiles"], "comment": "跳转到上一个标红出问题的地方" },
