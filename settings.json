@@ -51,43 +51,14 @@
       "comment": "显示左侧资源管理器并选中该文件"
     },
     {
-      "before": ["leader", "g"],
-      "commands": ["workbench.action.quickOpen"],
-      "comment": "显示文件快速选择工具栏"
-    },
-    //  g for Go
-    {
-      "before": ["g", "j"],
-      "commands": ["extension.vim_ctrl+d"],
-      "comment": "gj 快速下移"
-    },
-    {
-      "before": ["g", "k"],
-      "commands": ["extension.vim_ctrl+u"],
-      "comment": "gk 快速上移"
-    },
-    {
-      "before": ["g", "s"],
-      "commands": ["workbench.action.gotoSymbol"],
-      "comment": "gs 快速跳转到符号"
-    },
-    {
-      "before": ["g", "["],
-      "commands": ["editor.action.marker.prevInFiles"],
-      "comment": "跳转到下一个标红出问题的地方"
-    },
-    {
-      "before": ["g", "]"],
-      "commands": ["editor.action.marker.nextInFiles"],
-      "comment": "跳转到上一个标红出问题的地方"
-    },
-    {
-      "before": ["g", ";"],
-      "after": ["%"]
+      "before": ["leader", "x"],
+      "commands": [":q"],
+      "comment": "关闭文件"
     },
     // 快速移动
     { "before": ["H"], "after": ["^"] },
     { "before": ["L"], "after": ["$"] },
+    { "before": [";"], "after": ["%"] },
     // 折行
     { "before": ["K"], "commands": ["lineBreakInsert"], "slient": true },
     // 使用内置撤销和重做
@@ -107,6 +78,7 @@
     { "before": ["{"], "after": ["i", "{"] }
   ],
   "vim.handleKeys": {
+    "<C-p>": false, // 转到文件
     "<C-k>": false, // 组合键前缀
     "<C-a>": false, // 全选
     "<C-j>": false // Terminal 显示和隐藏
